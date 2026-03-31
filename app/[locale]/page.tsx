@@ -24,7 +24,7 @@ export default async function HomePage({
     <>
       <Navbar locale={locale} />
       <main>
-        <Hero />
+        <Hero locale={locale} />
         <About />
         <Skills />
         <Projects />

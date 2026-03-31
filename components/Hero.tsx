@@ -8,7 +8,7 @@ const ERASING_SPEED = 50;
 const PAUSE_BEFORE_ERASE = 2000;
 const PAUSE_BEFORE_NEXT = 400;
 
-export default function Hero() {
+export default function Hero({ locale }: { locale: string }) {
   const t = useTranslations('hero');
   const roles = [t('role1'), t('role2'), t('role3')];
 
@@ -134,7 +134,7 @@ export default function Hero() {
             {t('ctaContact')}
           </button>
           <a
-            href="/portfolio/kevin-cv-en.pdf"
+            href={`/portfolio/kevin-cv-${locale}.pdf`}
             download
             className="flex items-center gap-2 px-6 py-3 border border-slate-700 hover:border-slate-500 text-slate-400 hover:text-slate-200 font-medium rounded-full transition-all hover:scale-105 active:scale-95 text-sm"
           >

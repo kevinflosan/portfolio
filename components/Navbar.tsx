@@ -69,7 +69,7 @@ export default function Navbar({ locale }: { locale: string }) {
           </Link>
           {/* Download CV */}
           <a
-            href="/portfolio/kevin-cv-en.pdf"
+            href={`/portfolio/kevin-cv-${locale}.pdf`}
             download
             className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white rounded-full transition-colors"
           >
@@ -108,7 +108,7 @@ export default function Navbar({ locale }: { locale: string }) {
               {otherLocale.toUpperCase()}
             </Link>
             <a
-              href="/portfolio/kevin-cv-en.pdf"
+              href={`/portfolio/kevin-cv-${locale}.pdf`}
               download
               className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium bg-indigo-600 text-white rounded-full"
             >
