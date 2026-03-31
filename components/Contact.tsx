@@ -22,8 +22,8 @@ function GitHubIcon({ size = 18 }: { size?: number }) {
 }
 
 const EMAIL = 'kevinflosan@gmail.com';
-const LINKEDIN = 'linkedin.com/in/kevin-floressánchez-3302b3120';
-const LINKEDIN_URL = 'https://www.linkedin.com/in/kevin-floressánchez-3302b3120';
+const LINKEDIN = 'linkedin.com/in/kevin-flores-sánchez-3302b3120';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/kevin-flores-s%C3%A1nchez-3302b3120/';
 const GITHUB = 'github.com/kevinflosan';
 const GITHUB_URL = 'https://github.com/kevinflosan';
 
