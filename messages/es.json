@@ -1,0 +1,115 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "downloadCV": "Descargar CV"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "openToWork": "Abierto a Oportunidades",
+    "role1": "Desarrollador Full-Stack Senior",
+    "role2": "Product Owner",
+    "role3": "Technical Lead",
+    "description": "8+ años construyendo productos digitales escalables en sectores AgriTech, LegalTech y Empresarial.",
+    "ctaProjects": "Ver Proyectos",
+    "ctaContact": "Contáctame",
+    "ctaCV": "Descargar CV",
+    "location": "Querétaro, México"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Perfil Técnico-Estratégico Híbrido",
+    "description": "Ingeniero de software con 8+ años de experiencia en desarrollo full-stack y 2 años de liderazgo como Product Owner. Especializado en la entrega de productos digitales escalables en los sectores AgriTech, LegalTech y administración empresarial. Certificado en PMI (PMBOK 2025) con dominio sólido de Scrum y Kanban, y 2 años de integración práctica de herramientas de IA en flujos de trabajo de desarrollo.",
+    "stat1Value": "8+",
+    "stat1Label": "Años Exp. Desarrollo",
+    "stat2Value": "5",
+    "stat2Label": "Años como Product Owner",
+    "stat3Value": "3",
+    "stat3Label": "Clientes Enterprise",
+    "stat4Value": "PMI",
+    "stat4Label": "Certificado 2025"
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "mobile": "Móvil",
+    "database": "Base de Datos",
+    "ai": "IA y Visión Computacional",
+    "management": "Producto y Gestión"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Trabajo seleccionado de mi carrera profesional",
+    "impactLabel": "Impacto Clave",
+    "stackLabel": "Tecnologías",
+    "roleLabel": "Rol",
+    "project1": {
+      "title": "Alis · Plataforma AgriTech",
+      "sector": "AgriTech · Visión Computacional",
+      "role": "Desarrollador Full-Stack Senior · Tech Lead",
+      "description": "Plataforma empresarial para el sector agrícola con módulo de visión computacional para reconocimiento facial y control de acceso de personal en campo. Diseñé la arquitectura full-stack y construí una biblioteca de componentes reutilizables que redujo el tiempo de desarrollo de nuevos módulos en un 40%.",
+      "impact1": "40% reducción en tiempo de desarrollo de módulos",
+      "impact2": "Control de acceso por reconocimiento facial a escala",
+      "impact3": "Biblioteca de componentes reutilizables en toda la suite"
+    },
+    "project2": {
+      "title": "Suite AgriTech",
+      "sector": "AgriTech · SaaS · Producto",
+      "role": "Product Owner · Desarrollador Full-Stack",
+      "description": "Lideré como Product Owner tres productos SaaS AgriTech (Allfruits, Avoking, Frutcom) en el mercado de trazabilidad de fruta y gestión agrícola. Definí roadmaps, prioricé backlogs y lideré un equipo Scrum de 3 desarrolladores.",
+      "impact1": "60% mejora en rendimiento de consultas de trazabilidad",
+      "impact2": "30% reducción en el tiempo de ciclo de entrega",
+      "impact3": "3 productos gestionados simultáneamente como PO"
+    },
+    "other": {
+      "title": "Más Proyectos",
+      "items": [
+        "LegalTracking (SaaS B2B) · Clientes: Home Depot, Ernst & Young, Viva Aerobus",
+        "Plataformas web freelance · Clientes del sector coaching",
+        "Banca Libertad · Integración con Buró de Crédito"
+      ]
+    }
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "job1": {
+      "title": "Product Owner & Desarrollador Full-Stack Senior",
+      "company": "Canicalabs",
+      "period": "2021 – Presente",
+      "description": "Lideré la estrategia de producto, definición de roadmap y priorización de backlog para soluciones web y móviles en sectores AgriTech y administrativo. Contribuí como Desarrollador Full-Stack Senior y Technical Lead. Implementé flujos de trabajo asistidos por IA usando Claude (Anthropic) y herramientas LLM."
+    },
+    "job2": {
+      "title": "Gerente de IT y Desarrollador Freelance",
+      "company": "Mix.Coworking, UPA Construcción y Otros",
+      "period": "2019 – 2021",
+      "description": "Gestioné infraestructura de IT para 3 organizaciones de forma simultánea. Desarrollé plataformas web full-stack para clientes del sector coaching. Reduje tiempos de respuesta de IT en ~50% mediante protocolos estructurados de soporte."
+    },
+    "job3": {
+      "title": "Desarrollador de Software",
+      "company": "Codelab – LegalTracking",
+      "period": "2016 – 2019",
+      "description": "Desarrollé y mantuve módulos para una plataforma SaaS B2B de gestión fiscal y administrativa. Implementé soluciones personalizadas para Home Depot, Ernst & Young, Viva Aerobus y Sevin & Asociados. Reduje tiempos de procesamiento documental en ~35% mediante automatización e integración de sistemas."
+    },
+    "job4": {
+      "title": "Desarrollador – Integración Buró de Crédito",
+      "company": "Banca Libertad",
+      "period": "2016",
+      "description": "Desarrollé módulos de integración con el Buró de Crédito mexicano para flujos de consulta y validación de datos crediticios en el sector financiero."
+    }
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "Abierto a nuevas oportunidades · Conectemos",
+    "emailLabel": "Correo",
+    "linkedinLabel": "LinkedIn",
+    "githubLabel": "GitHub",
+    "locationLabel": "Ubicación",
+    "locationValue": "Querétaro, México",
+    "copyEmail": "Copiar correo",
+    "copied": "¡Copiado!"
+  }
+}
