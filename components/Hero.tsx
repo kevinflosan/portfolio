@@ -78,111 +78,68 @@ export default function Hero({ locale }: { locale: string }) {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-violet-600/15 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Open to work badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          {t('openToWork')}
+        </div>
 
-          {/* Left: text content */}
-          <div className="flex-1 text-center lg:text-left">
-            {/* Open to work badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              {t('openToWork')}
-            </div>
+        {/* Greeting + name */}
+        <p className="text-slate-400 text-lg sm:text-xl mb-2">{t('greeting')}</p>
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
+          Kevin{' '}
+          <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
+            Flores
+          </span>{' '}
+          Sánchez
+        </h1>
 
-            {/* Greeting + name */}
-            <p className="text-slate-400 text-lg sm:text-xl mb-2">{t('greeting')}</p>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
-              Kevin{' '}
-              <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
-                Flores
-              </span>{' '}
-              Sánchez
-            </h1>
+        {/* Typewriter role */}
+        <div className="h-10 sm:h-12 flex items-center justify-center mb-6">
+          <span className="text-lg sm:text-2xl font-semibold text-indigo-300">
+            {displayText}
+            <span
+              className={`inline-block w-0.5 h-6 sm:h-7 bg-indigo-400 ml-0.5 align-middle transition-opacity duration-100 ${
+                showCursor ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          </span>
+        </div>
 
-            {/* Typewriter role */}
-            <div className="h-10 sm:h-12 flex items-center justify-center lg:justify-start mb-6">
-              <span className="text-lg sm:text-2xl font-semibold text-indigo-300">
-                {displayText}
-                <span
-                  className={`inline-block w-0.5 h-6 sm:h-7 bg-indigo-400 ml-0.5 align-middle transition-opacity duration-100 ${
-                    showCursor ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-              </span>
-            </div>
+        {/* Description */}
+        <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto mb-8">
+          {t('description')}
+        </p>
 
-            {/* Description */}
-            <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 mb-6">
-              {t('description')}
-            </p>
+        {/* Location */}
+        <div className="flex items-center justify-center gap-1.5 text-slate-500 text-sm mb-10">
+          <MapPin size={14} />
+          <span>{t('location')}</span>
+        </div>
 
-            {/* Location */}
-            <div className="flex items-center justify-center lg:justify-start gap-1.5 text-slate-500 text-sm mb-8">
-              <MapPin size={14} />
-              <span>{t('location')}</span>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-              <button
-                onClick={scrollToProjects}
-                className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-full transition-all hover:scale-105 active:scale-95"
-              >
-                {t('ctaProjects')}
-                <ArrowRight size={16} />
-              </button>
-              <button
-                onClick={scrollToContact}
-                className="flex items-center gap-2 px-6 py-3 border border-slate-600 hover:border-indigo-500 text-slate-300 hover:text-white font-medium rounded-full transition-all hover:scale-105 active:scale-95"
-              >
-                {t('ctaContact')}
-              </button>
-              <a
-                href={`/portfolio/kevin-cv-${locale}.pdf`}
-                download
-                className="flex items-center gap-2 px-6 py-3 border border-slate-700 hover:border-slate-500 text-slate-400 hover:text-slate-200 font-medium rounded-full transition-all hover:scale-105 active:scale-95 text-sm"
-              >
-                {t('ctaCV')}
-              </a>
-            </div>
-          </div>
-
-          {/* Right: profile photo */}
-          <div className="flex-shrink-0 flex items-center justify-center">
-            <div className="relative">
-              {/* Outer rotating ring */}
-              <div
-                className="absolute inset-0 rounded-full"
-                style={{
-                  background: 'conic-gradient(from 0deg, rgba(99,102,241,0.8), rgba(139,92,246,0.4), rgba(99,102,241,0.1), rgba(99,102,241,0.8))',
-                  padding: '3px',
-                  animation: 'spin 8s linear infinite',
-                  borderRadius: '50%',
-                  margin: '-6px',
-                }}
-              />
-              {/* Glow behind photo */}
-              <div className="absolute inset-0 rounded-full bg-indigo-600/30 blur-2xl scale-110 pointer-events-none" />
-              {/* Photo container */}
-              <div
-                className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden transition-transform duration-300 hover:scale-105"
-                style={{
-                  boxShadow: '0 0 0 3px rgba(99,102,241,0.6), 0 0 40px rgba(99,102,241,0.25)',
-                }}
-              >
-                <img
-                  src="/portfolio/kevin-foto.jpg"
-                  alt="Kevin Flores Sánchez"
-                  className="w-full h-full object-cover"
-                  style={{
-                    objectPosition: '50% 15%',
-                    filter: 'contrast(1.08) brightness(1.06) saturate(1.1)',
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <button
+            onClick={scrollToProjects}
+            className="flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-full transition-all hover:scale-105 active:scale-95"
+          >
+            {t('ctaProjects')}
+            <ArrowRight size={16} />
+          </button>
+          <button
+            onClick={scrollToContact}
+            className="flex items-center gap-2 px-6 py-3 border border-slate-600 hover:border-indigo-500 text-slate-300 hover:text-white font-medium rounded-full transition-all hover:scale-105 active:scale-95"
+          >
+            {t('ctaContact')}
+          </button>
+          <a
+            href={`/portfolio/kevin-cv-${locale}.pdf`}
+            download
+            className="flex items-center gap-2 px-6 py-3 border border-slate-700 hover:border-slate-500 text-slate-400 hover:text-slate-200 font-medium rounded-full transition-all hover:scale-105 active:scale-95 text-sm"
+          >
+            {t('ctaCV')}
+          </a>
         </div>
       </div>
 

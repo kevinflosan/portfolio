@@ -79,10 +79,24 @@ export default function About() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Avatar + badge */}
         <div className="flex flex-col items-center gap-6">
-          {/* Avatar placeholder */}
+          {/* Profile photo */}
           <div className="relative">
-            <div className="w-48 h-48 rounded-full bg-gradient-to-br from-indigo-600 to-violet-700 flex items-center justify-center text-5xl font-bold text-white shadow-2xl shadow-indigo-900/50">
-              KF
+            <div className="absolute inset-0 rounded-full bg-indigo-600/30 blur-2xl scale-110 pointer-events-none" />
+            <div
+              className="relative w-48 h-48 rounded-full overflow-hidden"
+              style={{
+                boxShadow: '0 0 0 3px rgba(99,102,241,0.6), 0 0 40px rgba(99,102,241,0.25)',
+              }}
+            >
+              <img
+                src="/portfolio/kevin-foto.jpg"
+                alt="Kevin Flores Sánchez"
+                className="w-full h-full object-cover"
+                style={{
+                  objectPosition: '50% 15%',
+                  filter: 'contrast(1.08) brightness(1.06) saturate(1.1)',
+                }}
+              />
             </div>
             <div className="absolute -bottom-2 -right-2 w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center shadow-lg">
               <span className="text-xl">✓</span>
