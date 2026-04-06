@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Flores Sánchez — CV Optimizado</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+      font-size: 10pt;
+      color: #2d2d2d;
+      background: #e8edf2;
+    }
+
+    .page {
+      max-width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      background: white;
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar {
+      background: #0f2340;
+      color: white;
+      padding: 28px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .photo-wrap {
+      text-align: center;
+    }
+
+    .photo-wrap img {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      border: 3px solid #3b9fd4;
+      object-fit: cover;
+    }
+
+    .sidebar-section h3 {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #3b9fd4;
+      border-bottom: 1px solid rgba(59,159,212,0.4);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      margin-bottom: 7px;
+      font-size: 8pt;
+      color: #b8cfe0;
+      line-height: 1.4;
+    }
+
+    .contact-item .ico { font-size: 9pt; flex-shrink: 0; margin-top: 1px; }
+
+    /* Skills */
+    .skill-group { margin-bottom: 10px; }
+
+    .skill-group h4 {
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: #6fb3d8;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(59,159,212,0.15);
+      border: 1px solid rgba(59,159,212,0.35);
+      color: #c0d8ea;
+      font-size: 7.2pt;
+      padding: 2px 7px;
+      border-radius: 10px;
+      margin: 2px 2px 2px 0;
+    }
+
+    /* Management list */
+    .mgmt-list {
+      list-style: none;
+      font-size: 8pt;
+      color: #b8cfe0;
+      line-height: 1.8;
+    }
+
+    .mgmt-list li::before {
+      content: "▸ ";
+      color: #3b9fd4;
+      font-size: 8pt;
+    }
+
+    /* Language bars */
+    .lang-row { margin-bottom: 8px; }
+
+    .lang-label {
+      font-size: 8pt;
+      color: #b8cfe0;
+      margin-bottom: 3px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bar-bg {
+      background: rgba(255,255,255,0.12);
+      height: 5px;
+      border-radius: 3px;
+    }
+
+    .bar-fill {
+      height: 5px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #3b9fd4, #6fb3d8);
+    }
+
+    /* ─── MAIN ─── */
+    .main { padding: 32px 28px 28px; }
+
+    /* Header name */
+    .name-block {
+      border-bottom: 2.5px solid #0f2340;
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+
+    .name-block h1 {
+      font-size: 21pt;
+      font-weight: 800;
+      color: #0f2340;
+      letter-spacing: 0.3px;
+      line-height: 1.1;
+    }
+
+    .name-block .role-line {
+      font-size: 9.5pt;
+      color: #3b9fd4;
+      font-weight: 600;
+      margin-top: 5px;
+      letter-spacing: 0.2px;
+    }
+
+    /* Section titles */
+    .section { margin-bottom: 20px; }
+
+    .section-title {
+      font-size: 8.5pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #0f2340;
+      border-left: 4px solid #3b9fd4;
+      padding-left: 8px;
+      margin-bottom: 12px;
+    }
+
+    /* Summary */
+    .summary {
+      font-size: 8.8pt;
+      line-height: 1.75;
+      color: #3a3a3a;
+      text-align: justify;
+    }
+
+    .summary strong { color: #0f2340; }
+
+    /* Job entries */
+    .job {
+      margin-bottom: 16px;
+      padding-left: 12px;
+      border-left: 2px solid #dde8f2;
+      position: relative;
+    }
+
+    .job::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3b9fd4;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 2px;
+    }
+
+    .job-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0f2340;
+    }
+
+    .job-company {
+      font-size: 8.8pt;
+      color: #3b9fd4;
+      font-weight: 600;
+    }
+
+    .job-meta {
+      text-align: right;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+
+    .job-date {
+      font-size: 7.8pt;
+      color: #888;
+      white-space: nowrap;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e6f2fb;
+      color: #0f2340;
+      font-size: 6.5pt;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-top: 2px;
+    }
+
+    .job ul {
+      margin-top: 7px;
+      padding-left: 13px;
+    }
+
+    .job li {
+      font-size: 8.3pt;
+      line-height: 1.55;
+      color: #3a3a3a;
+      margin-bottom: 4px;
+    }
+
+    .job li strong { color: #0f2340; }
+
+    .metric {
+      background: #f0f8ff;
+      color: #0f2340;
+      font-weight: 700;
+      padding: 0 3px;
+      border-radius: 2px;
+    }
+
+    /* Education */
+    .cert-card {
+      background: linear-gradient(135deg, #eef6fd, #ddeefa);
+      border: 1px solid #3b9fd4;
+      border-radius: 6px;
+      padding: 9px 12px;
+      margin-bottom: 9px;
+    }
+
+    .cert-card h4 {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #0f2340;
+      margin-bottom: 2px;
+    }
+
+    .cert-card .cert-sub {
+      font-size: 7.8pt;
+      color: #3b9fd4;
+      font-weight: 600;
+    }
+
+    .cert-card .cert-desc {
+      font-size: 7.8pt;
+      color: #555;
+      margin-top: 3px;
+      line-height: 1.4;
+    }
+
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 6px 0;
+    }
+
+    .edu-row h4 {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #0f2340;
+    }
+
+    .edu-row p { font-size: 8pt; color: #666; }
+
+    .edu-row .yr { font-size: 8pt; color: #999; white-space: nowrap; margin-left: 10px; }
+
+    /* Achievements grid */
+    .ach-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+
+    .ach-item {
+      background: #f7f9fb;
+      border-left: 3px solid #3b9fd4;
+      padding: 5px 8px;
+      font-size: 7.8pt;
+      color: #3a3a3a;
+      line-height: 1.4;
+    }
+
+    .ach-item strong { color: #0f2340; }
+
+    .tag-ai {
+      display: inline-block;
+      background: rgba(138, 92, 246, 0.18);
+      border: 1px solid rgba(138, 92, 246, 0.45);
+      color: #d4bcff;
+      font-size: 7.2pt;
+      padding: 2px 7px;
+      border-radius: 10px;
+      margin: 2px 2px 2px 0;
+      font-weight: 600;
+    }
+
+    /* ─── PRINT ─── */
+    @media print {
+      body { background: white; }
+      .page {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+      }
+      @page { margin: 0; size: A4; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══════════════════════════════
+       SIDEBAR
+  ════════════════════════════════ -->
+  <aside class="sidebar">
+
+    <div class="photo-wrap">
+      <img src="foto.jpg" alt="Kevin Flores Sánchez">
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="sidebar-section">
+      <h3>Contacto</h3>
+      <div class="contact-item">
+        <span class="ico">✉</span>
+        <span>kevinflosan@gmail.com</span>
+      </div>
+      <div class="contact-item">
+        <span class="ico">☎</span>
+        <span>452-203-2689</span>
+      </div>
+      <div class="contact-item">
+        <span class="ico">🔗</span>
+        <span>linkedin.com/in/kevin-flores-sánchez-3302b3120</span>
+      </div>
+      <div class="contact-item">
+        <span class="ico">📍</span>
+        <span>Querétaro, México</span>
+      </div>
+    </div>
+
+    <!-- HABILIDADES TÉCNICAS -->
+    <div class="sidebar-section">
+      <h3>Stack Técnico</h3>
+
+      <div class="skill-group">
+        <h4>Backend</h4>
+        <span class="tag">C#</span>
+        <span class="tag">.NET Core</span>
+        <span class="tag">ASP.NET Zero</span>
+        <span class="tag">PHP</span>
+        <span class="tag">REST API</span>
+        <span class="tag">Entity Framework</span>
+      </div>
+
+      <div class="skill-group">
+        <h4>Frontend</h4>
+        <span class="tag">Blazor</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">HTML5 / CSS3</span>
+        <span class="tag">Bootstrap 5</span>
+        <span class="tag">jQuery / Ajax</span>
+      </div>
+
+      <div class="skill-group">
+        <h4>Mobile</h4>
+        <span class="tag">Xamarin</span>
+        <span class="tag">.NET MAUI</span>
+        <span class="tag">iOS & Android</span>
+      </div>
+
+      <div class="skill-group">
+        <h4>Bases de Datos</h4>
+        <span class="tag">SQL Server</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Oracle</span>
+        <span class="tag">DBA</span>
+      </div>
+
+      <div class="skill-group">
+        <h4>DevOps & Tools</h4>
+        <span class="tag">Git</span>
+        <span class="tag">TFS</span>
+        <span class="tag">Visual Studio</span>
+      </div>
+
+      <div class="skill-group">
+        <h4>✦ IA & Computer Vision</h4>
+        <span class="tag-ai">Claude (Anthropic)</span>
+        <span class="tag-ai">Prompt Engineering</span>
+        <span class="tag-ai">LLM Integration</span>
+        <span class="tag-ai">AI-assisted Dev</span>
+        <span class="tag-ai">Emgu CV</span>
+        <span class="tag-ai">Reconocimiento Facial</span>
+      </div>
+    </div>
+
+    <!-- GESTIÓN DE PRODUCTO -->
+    <div class="sidebar-section">
+      <h3>Product & Gestión</h3>
+      <ul class="mgmt-list">
+        <li>Product Ownership</li>
+        <li>Backlog Prioritization</li>
+        <li>Roadmap Strategy</li>
+        <li>Scrum / Kanban</li>
+        <li>Sprint Planning</li>
+        <li>Stakeholder Management</li>
+        <li>Risk Management (PMI)</li>
+        <li>User Story Mapping</li>
+        <li>OKRs & KPIs</li>
+      </ul>
+    </div>
+
+    <!-- IDIOMAS -->
+    <div class="sidebar-section">
+      <h3>Idiomas</h3>
+      <div class="lang-row">
+        <div class="lang-label"><span>Español</span><span>Nativo</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div>
+      </div>
+      <div class="lang-row">
+        <div class="lang-label"><span>Inglés</span><span>Avanzado (B2)</span></div>
+        <div class="bar-bg"><div class="bar-fill" style="width:80%"></div></div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ═══════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════ -->
+  <main class="main">
+
+    <!-- NOMBRE -->
+    <div class="name-block">
+      <h1>Kevin Flores Sánchez</h1>
+      <div class="role-line">Senior Full-Stack Developer &nbsp;·&nbsp; Product Owner &nbsp;·&nbsp; Technical Lead</div>
+    </div>
+
+    <!-- PERFIL PROFESIONAL -->
+    <div class="section">
+      <div class="section-title">Perfil Profesional</div>
+      <p class="summary">
+        Ingeniero de software con <strong>más de 8 años de experiencia</strong> en desarrollo full-stack y <strong>2 años liderando como Product Owner</strong>, especializado en la entrega de productos digitales escalables en los sectores <strong>AgriTech, LegalTech y administrativo</strong>. Perfil <strong>híbrido técnico-estratégico</strong> con historial demostrable gestionando equipos multidisciplinarios, definiendo roadmaps y convirtiendo necesidades de negocio en soluciones de alto impacto. <strong>Certificado en PMI (PMBOK 2025)</strong>, con sólido dominio de Scrum, Kanban y stakeholder management. Con <strong>2 años de experiencia en el uso de herramientas de Inteligencia Artificial</strong> aplicadas al desarrollo de software. He colaborado en proyectos para clientes enterprise como <em>Home Depot, Ernst &amp; Young y Viva Aerobus</em>.
+      </p>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    <div class="section">
+      <div class="section-title">Experiencia Laboral</div>
+
+      <!-- CANICALABS -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Product Owner &amp; Senior Full-Stack Developer</div>
+            <div class="job-company">Canicalabs &nbsp;<span style="font-weight:400; color:#6a9bbf; font-size:8pt;">· Empresa de producto de software</span></div>
+          </div>
+          <div class="job-meta">
+            <div class="job-date">2021 – Presente</div>
+            <span class="badge">Trabajo actual · 5 años</span>
+          </div>
+        </div>
+        <ul>
+          <li>Lideré como <strong>Product Owner</strong> la estrategia de producto, definición de roadmap y priorización de backlog para soluciones web y móvil en sectores AgriTech y administrativo, colaborando con clientes como <strong>Alis, Allfruits, Avoking y Frutcom</strong>.</li>
+          <li>Participé como <strong>desarrollador full-stack</strong> en proyectos para <strong>UnityCFDI, Inbolt y LegaxTechPro</strong>, implementando módulos backend y frontend con .NET Core, Blazor y ASP.NET Zero.</li>
+          <li>Lideré como PO un equipo de <strong class="metric">3 desarrolladores</strong>; facilité ceremonias Scrum completas — sprint planning, refinement, review y retrospectivas — logrando mayor predictibilidad en entregas y <strong class="metric">reducción del ciclo de entrega en ~30%</strong> mediante definición clara de DoD y criterios de aceptación.</li>
+          <li><strong>Proyecto destacado — Alis:</strong> producto de software con módulo de <strong>análisis de reconocimiento facial</strong> implementado con tecnología <strong>Emgu CV</strong>, aplicado al sector agrícola para identificación y control de personal en campo.</li>
+          <li>Diseñé arquitecturas full-stack con <strong>.NET Core, Blazor y ASP.NET Zero</strong>; construí librería de componentes reutilizables que <strong class="metric">redujo el tiempo de desarrollo de nuevos módulos en ~40%</strong> y mejoró la consistencia de la UI.</li>
+          <li>Desarrollé aplicaciones móviles multiplataforma (iOS &amp; Android) con <strong>Xamarin y .NET MAUI</strong>, extendiendo la cobertura de producto a canales móviles y ampliando el alcance comercial de los clientes.</li>
+          <li>Administré bases de datos SQL Server y Oracle como DBA; optimicé queries críticos de trazabilidad agrícola logrando una <strong class="metric">mejora de rendimiento del 60%</strong> en reportes de alto volumen.</li>
+          <li>Utilizo herramientas de <strong>Inteligencia Artificial</strong> (incluyendo <strong>Claude de Anthropic</strong>) desde hace 2 años como apoyo al desarrollo: generación de código, revisión técnica y análisis de requerimientos.</li>
+        </ul>
+      </div>
+
+      <!-- IT MANAGER + FREELANCER (simultáneo) -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">IT Manager &amp; Freelance Software Developer</div>
+            <div class="job-company">Mix.Coworking · UPA Construcción · Vazgo Administración · Proyectos propios</div>
+          </div>
+          <div class="job-meta">
+            <div class="job-date">2019 – 2021</div>
+            <span class="badge">2 años · roles simultáneos</span>
+          </div>
+        </div>
+        <ul>
+          <li>Gestioné infraestructura y operación tecnológica de <strong>3 organizaciones en paralelo</strong>, garantizando continuidad de sistemas y disponibilidad operativa.</li>
+          <li>Implementé soluciones tecnológicas personalizadas que <strong class="metric">redujeron tiempos de respuesta IT en ~50%</strong> mediante protocolos de soporte estructurados y optimización de procesos internos.</li>
+          <li>En paralelo, desarrollé plataformas web completas (frontend + backend + CMS) como freelancer para clientes del sector coaching: <em>Luis Topete Success, Action Coach, Marily Torres</em>.</li>
+        </ul>
+      </div>
+
+      <!-- CODELAB -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Software Developer</div>
+            <div class="job-company">Codelab — LegalTracking</div>
+          </div>
+          <div class="job-meta">
+            <div class="job-date">2016 – 2019</div>
+            <span class="badge">2½ años</span>
+          </div>
+        </div>
+        <ul>
+          <li>Desarrollé y di soporte a módulos de software web para <strong>LegalTracking</strong>, plataforma SaaS B2B de gestión fiscal y administrativa para despachos jurídicos.</li>
+          <li>Entregué implementaciones a medida para clientes enterprise de alto perfil: <strong>Home Depot, Ernst &amp; Young, Viva Aerobus y Sevin &amp; Asociados</strong>, con entregas en tiempo y dentro del alcance definido.</li>
+          <li>Automaticé procesos administrativos mediante integraciones de sistemas a medida, <strong class="metric">reduciendo el tiempo de gestión documental en ~35%</strong> en las organizaciones cliente.</li>
+          <li>Coordiné con PMs y usuarios finales para la recolección de requerimientos, control de cambios y validación de entregables bajo plazos estrictos.</li>
+        </ul>
+      </div>
+
+      <!-- BANCA LIBERTAD -->
+      <div class="job">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Developer — Proyecto Buró de Crédito</div>
+            <div class="job-company">Banca Libertad</div>
+          </div>
+          <div class="job-meta">
+            <div class="job-date">2016</div>
+            <span class="badge">2 meses</span>
+          </div>
+        </div>
+        <ul>
+          <li>Colaboré en el desarrollo de módulos de integración con el <strong>Buró de Crédito</strong> dentro del sector financiero, implementando flujos de consulta y validación de datos crediticios.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- FORMACIÓN Y CERTIFICACIONES -->
+    <div class="section">
+      <div class="section-title">Formación y Certificaciones</div>
+
+      <div class="cert-card">
+        <h4>🏅 Diplomado en Project Management Professional</h4>
+        <div class="cert-sub">Project Management Institute (PMI) · PMBOK Guide · 2025</div>
+        <div class="cert-desc">Gestión de proyectos, riesgos, stakeholders, planificación estratégica y control de calidad bajo estándares internacionales PMI. Marco de trabajo aplicable a entornos ágiles e híbridos.</div>
+      </div>
+
+      <div class="edu-row">
+        <div>
+          <h4>Ingeniería en Cibernética y Sistemas Computacionales &nbsp;<span style="font-size:8pt; color:#3b9fd4; font-weight:600;">· Titulado</span></h4>
+          <p>Universidad La Salle · Pachuca</p>
+        </div>
+        <div class="yr">2011 – 2015</div>
+      </div>
+    </div>
+
+    <!-- LOGROS -->
+    <div class="section">
+      <div class="section-title">Logros y Reconocimientos</div>
+      <div class="ach-grid">
+        <div class="ach-item"><strong>🥇 1er Lugar</strong><br>Concurso de Programación<br>U. La Salle Pachuca, 2015</div>
+        <div class="ach-item"><strong>🥉 3er Lugar</strong><br>Concurso de Programación<br>U. La Salle Cuernavaca, 2015</div>
+        <div class="ach-item"><strong>4° Lugar</strong><br>Concurso de Programación<br>U. La Salle Cuernavaca, 2013</div>
+        <div class="ach-item"><strong>Investigador</strong><br>3er Encuentro Nacional Jóvenes Investigadores<br>Citanova</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
