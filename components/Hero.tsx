@@ -79,6 +79,25 @@ export default function Hero({ locale }: { locale: string }) {
       <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-violet-600/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Profile photo */}
+        <div className="flex justify-center mb-8">
+          <div
+            className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden transition-transform duration-300 hover:scale-105"
+            style={{
+              boxShadow: '0 0 0 3px rgba(99,102,241,0.5), 0 0 24px rgba(99,102,241,0.3)',
+            }}
+          >
+            <img
+              src="/portfolio/kevin-foto.jpg"
+              alt="Kevin Flores Sánchez"
+              className="w-full h-full object-cover object-top"
+              style={{
+                filter: 'contrast(1.08) brightness(1.06) saturate(1.1)',
+              }}
+            />
+          </div>
+        </div>
+
         {/* Open to work badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
