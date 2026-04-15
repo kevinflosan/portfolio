@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { motion } from 'framer-motion';
 
 function useCountUp(target: number, duration = 1500, active: boolean) {
   const [count, setCount] = useState(0);
@@ -37,12 +38,16 @@ function Stat({
   const count = useCountUp(numericValue ?? 0, 1500, active && numericValue !== null);
 
   return (
-    <div className="text-center p-6 rounded-2xl bg-slate-800/60 border border-slate-700 hover:border-indigo-500/50 transition-colors">
+    <motion.div
+      variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+      whileHover={{ scale: 1.04 }}
+      className="text-center p-6 rounded-2xl bg-slate-800/60 border border-slate-700 hover:border-indigo-500/50 transition-colors cursor-default"
+    >
       <div className="text-3xl font-bold text-indigo-400 mb-1">
         {numericValue !== null ? `${count}${suffix ?? ''}` : value}
       </div>
       <div className="text-sm text-slate-400">{label}</div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -78,7 +83,13 @@ export default function About() {
 
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Avatar + badge */}
-        <div className="flex flex-col items-center gap-6">
+        <motion.div
+          className="flex flex-col items-center gap-6"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           {/* Profile photo */}
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-indigo-600/30 blur-2xl scale-110 pointer-events-none" />
@@ -114,22 +125,34 @@ export default function About() {
               </span>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Text + stats */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed mb-10">
             {t('description')}
           </p>
 
           {/* Stats grid */}
-          <div ref={ref} className="grid grid-cols-2 gap-4">
+          <motion.div
+            ref={ref}
+            className="grid grid-cols-2 gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+          >
             <Stat value={8} suffix="+" label={t('stat1Label')} active={visible} />
             <Stat value={5} label={t('stat2Label')} active={visible} />
             <Stat value={3} label={t('stat3Label')} active={visible} />
             <Stat value={t('stat4Value')} label={t('stat4Label')} active={visible} />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

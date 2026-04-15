@@ -30,12 +30,8 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className="h-full">
-      <body className="min-h-full bg-slate-900 text-slate-50 antialiased">
-        <NextIntlClientProvider locale={locale} messages={messages[locale]}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages[locale]}>
+      {children}
+    </NextIntlClientProvider>
   );
 }

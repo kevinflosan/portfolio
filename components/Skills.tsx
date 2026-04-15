@@ -1,6 +1,16 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { Code2, Monitor, Smartphone, Database, Bot, Layers } from 'lucide-react';
+import { motion, type Variants } from 'framer-motion';
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08 } },
+};
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const SKILL_DATA = [
   {
@@ -8,21 +18,21 @@ const SKILL_DATA = [
     icon: Code2,
     color: 'text-blue-400',
     bg: 'bg-blue-500/10 border-blue-500/20',
-    tech: ['C# / .NET Core', 'ASP.NET Zero', 'PHP', 'REST API', 'Entity Framework', 'Blazor Server'],
+    tech: ['C# / .NET Core', 'ASP.NET Zero', 'PHP', 'REST API', 'Entity Framework', 'Blazor Server', 'Microsoft Azure'],
   },
   {
     key: 'frontend' as const,
     icon: Monitor,
     color: 'text-violet-400',
     bg: 'bg-violet-500/10 border-violet-500/20',
-    tech: ['Blazor WebAssembly', 'JavaScript', 'HTML5 / CSS3', 'Bootstrap 5', 'jQuery / Ajax'],
+    tech: ['Blazor WebAssembly', 'JavaScript', 'HTML5 / CSS3', 'Bootstrap 5', 'jQuery / Ajax', 'Next.js / React', 'Tailwind CSS', 'Figma'],
   },
   {
     key: 'mobile' as const,
     icon: Smartphone,
     color: 'text-emerald-400',
     bg: 'bg-emerald-500/10 border-emerald-500/20',
-    tech: ['Xamarin', '.NET MAUI', 'iOS & Android', 'Cross-Platform Development'],
+    tech: ['Xamarin', '.NET MAUI', 'Flutter', 'iOS & Android', 'Cross-Platform Development'],
   },
   {
     key: 'database' as const,
@@ -60,10 +70,17 @@ export default function Skills() {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-60px' }}
+        >
           {SKILL_DATA.map(({ key, icon: Icon, color, bg, tech }) => (
-            <div
+            <motion.div
               key={key}
+              variants={cardVariants}
               className="rounded-2xl border bg-slate-900/60 p-6 hover:border-indigo-500/40 transition-all hover:-translate-y-1 group"
               style={{ borderColor: 'rgb(51 65 85)' }}
             >
@@ -86,9 +103,9 @@ export default function Skills() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

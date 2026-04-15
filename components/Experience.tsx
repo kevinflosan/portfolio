@@ -1,6 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { Briefcase } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const JOB_KEYS = ['job1', 'job2', 'job3', 'job4'] as const;
 const COLORS = ['bg-indigo-500', 'bg-violet-500', 'bg-blue-500', 'bg-slate-500'] as const;
@@ -19,18 +20,35 @@ export default function Experience() {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-5 top-0 bottom-0 w-px bg-slate-700" />
+          {/* Vertical line — animates scaleY on scroll */}
+          <motion.div
+            className="absolute left-5 top-0 bottom-0 w-px bg-slate-700 origin-top"
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          />
 
-          <div className="space-y-10">
+          <motion.div
+            className="space-y-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-40px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15 } } }}
+          >
             {JOB_KEYS.map((key, index) => (
-              <div key={key} className="relative flex gap-6">
+              <motion.div
+                key={key}
+                className="relative flex gap-6"
+                variants={{ hidden: { opacity: 0, x: -30 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } } }}
+              >
                 {/* Dot */}
-                <div
+                <motion.div
                   className={`relative z-10 w-10 h-10 rounded-full ${COLORS[index]} flex items-center justify-center flex-shrink-0 shadow-lg`}
+                  variants={{ hidden: { scale: 0 }, visible: { scale: 1, transition: { type: 'spring', stiffness: 200, damping: 15 } } }}
                 >
                   <Briefcase size={16} className="text-white" />
-                </div>
+                </motion.div>
 
                 {/* Content */}
                 <div className="flex-1 pb-2">
@@ -56,9 +74,9 @@ export default function Experience() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

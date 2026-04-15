@@ -22,7 +22,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "Hybrid Technical-Strategic Profile",
-    "description": "Software engineer with 8+ years of experience in full-stack development and 2 years of leadership as Product Owner. Specialized in delivering scalable digital products across AgriTech, LegalTech, and enterprise administration sectors. PMI-certified (PMBOK 2025) with solid command of Scrum and Kanban, and 2 years of hands-on AI tool integration in development workflows.",
+    "description": "Software engineer with 8+ years of experience in full-stack development and 2 years of leadership as Product Owner. Specialized in delivering scalable digital products across AgriTech, LegalTech, and enterprise administration sectors. PMI Diploma (PMBOK 2025) with solid command of Scrum and Kanban, and 2 years of hands-on AI tool integration in development workflows.",
     "stat1Value": "8+",
     "stat1Label": "Years Dev Experience",
     "stat2Value": "5",
@@ -30,7 +30,7 @@
     "stat3Value": "3",
     "stat3Label": "Enterprise Clients",
     "stat4Value": "PMI",
-    "stat4Label": "Certified 2025"
+    "stat4Label": "Diploma 2025"
   },
   "skills": {
     "title": "Technical Skills",
@@ -49,12 +49,12 @@
     "roleLabel": "Role",
     "project1": {
       "title": "Alis · AgriTech Platform",
-      "sector": "AgriTech · Computer Vision",
+      "sector": "AgriTech · Computer Vision · Mobile",
       "role": "Senior Full-Stack Developer · Tech Lead",
-      "description": "Enterprise platform for the agricultural sector featuring a computer vision module for field personnel facial recognition and access control. Designed the full-stack architecture and built a reusable component library that cut new module development time by 40%.",
+      "description": "Enterprise platform for the agricultural sector featuring computer vision for field personnel facial recognition and access control. Designed the full-stack architecture, built a reusable component library, and shipped the Alis Corte mobile app to both App Store and Google Play.",
       "impact1": "40% reduction in module development time",
       "impact2": "Facial recognition access control at scale",
-      "impact3": "Reusable component library across product suite"
+      "impact3": "Alis Corte app published on iOS & Android"
     },
     "project2": {
       "title": "AgriTech Suite",
@@ -65,11 +65,38 @@
       "impact2": "30% reduction in delivery cycle time",
       "impact3": "3 products managed simultaneously as PO"
     },
+    "project3": {
+      "title": "Legaxtech · LegalTech Platform",
+      "sector": "LegalTech · Compliance · SaaS B2B",
+      "role": "Senior Full-Stack Developer",
+      "description": "Corporate platform for downloading and analyzing fiscal information from Mexico's SAT (tax authority). Built compliance management modules including REPSE portal integration, multi-user document control, and automated fiscal data validation. Deployed on Microsoft Azure infrastructure.",
+      "impact1": "SAT integration for bulk CFDI download and validation",
+      "impact2": "REPSE compliance module for enterprise supplier management",
+      "impact3": "Azure-backed multi-user document control with version history"
+    },
+    "project4": {
+      "title": "Canicalabs · Product Web",
+      "sector": "Multi-industry · SaaS · Web",
+      "role": "Tech Lead · Full-Stack Developer",
+      "description": "Led and developed the product pages for Canicalabs and UnityCFDI. Managed a design team and handled front-end implementation. Canicalabs serves enterprise clients including Heineken, Mattel, and Caterpillar across 8+ countries. UnityCFDI is a Windows tool for Mexican accountants that overcomes SAT's 2,000-document download limit.",
+      "impact1": "Enterprise clients: Heineken, Mattel, Caterpillar, Magna",
+      "impact2": "Products reaching users across 8+ countries",
+      "impact3": "UnityCFDI in active production for accountants nationwide"
+    },
+    "project5": {
+      "title": "LegalTracking · Legal Management SaaS",
+      "sector": "LegalTech · B2B SaaS · Enterprise",
+      "role": "Software Developer",
+      "description": "B2B SaaS platform for comprehensive legal case management, serving enterprise clients across litigation, contracts, compliance, real estate, and intellectual property. Developed 15+ specialized modules and led the full platform migration from Visual Basic to C#, significantly improving maintainability and performance. Delivered custom implementations for high-profile clients.",
+      "impact1": "15+ specialized modules: litigation, contracts, compliance, real estate, IP",
+      "impact2": "Full platform migration from Visual Basic to C# — improved maintainability",
+      "impact3": "Enterprise clients: Home Depot, Ernst & Young, Viva Aerobus, Sevin & Asociados"
+    },
     "other": {
       "title": "Other Work",
       "items": [
-        "LegalTracking (B2B SaaS) · Clients: Home Depot, Ernst & Young, Viva Aerobus",
-        "Freelance web platforms · Coaching sector clients",
+        "CCADE · Corporate website · Industrial training sector (freelance)",
+        "Luis Topete Success · Business coaching website (freelance)",
         "Banca Libertad · Credit Bureau (Buró de Crédito) integration"
       ]
     }
@@ -92,7 +119,7 @@
       "title": "Software Developer",
       "company": "Codelab – LegalTracking",
       "period": "2016 – 2019",
-      "description": "Developed and maintained modules for a B2B SaaS platform for fiscal and administrative management. Delivered custom implementations for Home Depot, Ernst & Young, Viva Aerobus, and Sevin & Asociados. Reduced document processing time by ~35% via system integration automation."
+      "description": "Developed and maintained 15+ specialized modules for a B2B SaaS legal management platform (litigation, contracts, compliance, real estate, IP). Led the full migration of the platform from Visual Basic to C#. Delivered custom implementations for Home Depot, Ernst & Young, Viva Aerobus, and Sevin & Asociados. Reduced document processing time by ~35% via system integration automation."
     },
     "job4": {
       "title": "Developer – Credit Bureau Integration",

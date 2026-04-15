@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { MapPin, ChevronDown, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const TYPING_SPEED = 80;
 const ERASING_SPEED = 50;
@@ -75,10 +76,23 @@ export default function Hero({ locale }: { locale: string }) {
       />
 
       {/* Glow blobs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-violet-600/15 rounded-full blur-3xl pointer-events-none" />
+      <motion.div
+        className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"
+        animate={{ y: [0, -24, 0], scale: [1, 1.06, 1] }}
+        transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-violet-600/15 rounded-full blur-3xl pointer-events-none"
+        animate={{ y: [0, -16, 0], scale: [1, 1.08, 1] }}
+        transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut', delay: 2.5 }}
+      />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <motion.div
+        className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+      >
         {/* Open to work badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -141,7 +155,7 @@ export default function Hero({ locale }: { locale: string }) {
             {t('ctaCV')}
           </a>
         </div>
-      </div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-slate-600">

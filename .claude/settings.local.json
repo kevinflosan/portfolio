@@ -1,7 +1,18 @@
 {
   "permissions": {
     "allow": [
-      "Bash(gh run:*)"
+      "Bash(gh run:*)",
+      "Bash(where chrome:*)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Bash(C:/Program Files/Google/Chrome/Application/chrome.exe:*)",
+      "WebFetch(domain:www.canicalabs.com)",
+      "WebFetch(domain:unitycfdi.com)",
+      "WebFetch(domain:legaxtechpro.com)",
+      "WebFetch(domain:play.google.com)",
+      "WebFetch(domain:www.ccade.com.mx)",
+      "WebFetch(domain:www.luistopete.com)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:legaltracking.com.mx)"
     ]
   }
 }

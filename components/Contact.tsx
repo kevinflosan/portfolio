@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Mail, MapPin, Copy, Check } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 function LinkedInIcon({ size = 18 }: { size?: number }) {
   return (
@@ -48,9 +49,18 @@ export default function Contact() {
         </div>
 
         {/* Contact cards */}
-        <div className="space-y-4">
+        <motion.div
+          className="space-y-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+        >
           {/* Email */}
-          <div className="flex items-center justify-between p-5 rounded-2xl bg-slate-800/60 border border-slate-700 hover:border-indigo-500/50 transition-colors group">
+          <motion.div
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } }}
+            className="flex items-center justify-between p-5 rounded-2xl bg-slate-800/60 border border-slate-700 hover:border-indigo-500/50 transition-colors group"
+          >
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-indigo-600/20 flex items-center justify-center">
                 <Mail size={18} className="text-indigo-400" />
@@ -81,10 +91,11 @@ export default function Contact() {
                 </>
               )}
             </button>
-          </div>
+          </motion.div>
 
           {/* LinkedIn */}
-          <a
+          <motion.a
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } }}
             href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -99,10 +110,11 @@ export default function Contact() {
                 {LINKEDIN}
               </span>
             </div>
-          </a>
+          </motion.a>
 
           {/* GitHub */}
-          <a
+          <motion.a
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } }}
             href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -117,10 +129,13 @@ export default function Contact() {
                 {GITHUB}
               </span>
             </div>
-          </a>
+          </motion.a>
 
           {/* Location */}
-          <div className="flex items-center gap-4 p-5 rounded-2xl bg-slate-800/60 border border-slate-700">
+          <motion.div
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4 } } }}
+            className="flex items-center gap-4 p-5 rounded-2xl bg-slate-800/60 border border-slate-700"
+          >
             <div className="w-10 h-10 rounded-xl bg-emerald-600/20 flex items-center justify-center">
               <MapPin size={18} className="text-emerald-400" />
             </div>
@@ -128,8 +143,8 @@ export default function Contact() {
               <p className="text-xs text-slate-500 mb-0.5">{t('locationLabel')}</p>
               <span className="text-slate-200 text-sm sm:text-base">{t('locationValue')}</span>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Footer */}
         <p className="text-center text-slate-600 text-xs mt-12">

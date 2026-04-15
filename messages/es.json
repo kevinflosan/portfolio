@@ -22,7 +22,7 @@
   "about": {
     "title": "Sobre Mí",
     "subtitle": "Perfil Técnico-Estratégico Híbrido",
-    "description": "Ingeniero de software con 8+ años de experiencia en desarrollo full-stack y 2 años de liderazgo como Product Owner. Especializado en la entrega de productos digitales escalables en los sectores AgriTech, LegalTech y administración empresarial. Certificado en PMI (PMBOK 2025) con dominio sólido de Scrum y Kanban, y 2 años de integración práctica de herramientas de IA en flujos de trabajo de desarrollo.",
+    "description": "Ingeniero de software con 8+ años de experiencia en desarrollo full-stack y 2 años de liderazgo como Product Owner. Especializado en la entrega de productos digitales escalables en los sectores AgriTech, LegalTech y administración empresarial. Diplomado PMI (PMBOK 2025) con dominio sólido de Scrum y Kanban, y 2 años de integración práctica de herramientas de IA en flujos de trabajo de desarrollo.",
     "stat1Value": "8+",
     "stat1Label": "Años Exp. Desarrollo",
     "stat2Value": "5",
@@ -30,7 +30,7 @@
     "stat3Value": "3",
     "stat3Label": "Clientes Enterprise",
     "stat4Value": "PMI",
-    "stat4Label": "Certificado 2025"
+    "stat4Label": "Diplomado 2025"
   },
   "skills": {
     "title": "Habilidades Técnicas",
@@ -49,12 +49,12 @@
     "roleLabel": "Rol",
     "project1": {
       "title": "Alis · Plataforma AgriTech",
-      "sector": "AgriTech · Visión Computacional",
+      "sector": "AgriTech · Visión Computacional · Móvil",
       "role": "Desarrollador Full-Stack Senior · Tech Lead",
-      "description": "Plataforma empresarial para el sector agrícola con módulo de visión computacional para reconocimiento facial y control de acceso de personal en campo. Diseñé la arquitectura full-stack y construí una biblioteca de componentes reutilizables que redujo el tiempo de desarrollo de nuevos módulos en un 40%.",
+      "description": "Plataforma empresarial para el sector agrícola con visión computacional para reconocimiento facial y control de acceso de personal en campo. Diseñé la arquitectura full-stack, construí una biblioteca de componentes reutilizables y publiqué la app Alis Corte en App Store y Google Play.",
       "impact1": "40% reducción en tiempo de desarrollo de módulos",
       "impact2": "Control de acceso por reconocimiento facial a escala",
-      "impact3": "Biblioteca de componentes reutilizables en toda la suite"
+      "impact3": "App Alis Corte publicada en iOS y Android"
     },
     "project2": {
       "title": "Suite AgriTech",
@@ -65,11 +65,38 @@
       "impact2": "30% reducción en el tiempo de ciclo de entrega",
       "impact3": "3 productos gestionados simultáneamente como PO"
     },
+    "project3": {
+      "title": "Legaxtech · Plataforma LegalTech",
+      "sector": "LegalTech · Cumplimiento · SaaS B2B",
+      "role": "Desarrollador Full-Stack Senior",
+      "description": "Plataforma corporativa para la descarga y análisis de información fiscal del SAT. Construí módulos de gestión de cumplimiento regulatorio incluyendo integración con el portal REPSE, control documental multiusuario y validación automatizada de datos fiscales. Infraestructura sobre Microsoft Azure.",
+      "impact1": "Integración SAT para descarga y validación masiva de CFDIs",
+      "impact2": "Módulo REPSE para gestión de cumplimiento de proveedores",
+      "impact3": "Control documental multiusuario con historial de versiones en Azure"
+    },
+    "project4": {
+      "title": "Canicalabs · Páginas de Producto",
+      "sector": "Multi-industria · SaaS · Web",
+      "role": "Tech Lead · Desarrollador Full-Stack",
+      "description": "Lideré y desarrollé las páginas de producto de Canicalabs y UnityCFDI. Gestioné un equipo de diseño y me encargué de la implementación frontend. Canicalabs atiende a clientes enterprise como Heineken, Mattel y Caterpillar en 8+ países. UnityCFDI es una herramienta Windows para contadores mexicanos que supera el límite de 2,000 documentos del SAT.",
+      "impact1": "Clientes enterprise: Heineken, Mattel, Caterpillar, Magna",
+      "impact2": "Productos con alcance en 8+ países",
+      "impact3": "UnityCFDI en producción activa para contadores a nivel nacional"
+    },
+    "project5": {
+      "title": "LegalTracking · SaaS de Gestión Legal",
+      "sector": "LegalTech · SaaS B2B · Enterprise",
+      "role": "Desarrollador de Software",
+      "description": "Plataforma SaaS B2B para gestión legal integral, con módulos especializados en litigios, contratos, cumplimiento regulatorio, bienes raíces y propiedad intelectual. Desarrollé 15+ módulos y lideré la migración completa de la plataforma de Visual Basic a C#, mejorando significativamente la mantenibilidad y el rendimiento. Implementaciones personalizadas para clientes enterprise de alto perfil.",
+      "impact1": "15+ módulos especializados: litigios, contratos, cumplimiento, bienes raíces, PI",
+      "impact2": "Migración completa de Visual Basic a C# — mayor mantenibilidad y rendimiento",
+      "impact3": "Clientes enterprise: Home Depot, Ernst & Young, Viva Aerobus, Sevin & Asociados"
+    },
     "other": {
       "title": "Más Proyectos",
       "items": [
-        "LegalTracking (SaaS B2B) · Clientes: Home Depot, Ernst & Young, Viva Aerobus",
-        "Plataformas web freelance · Clientes del sector coaching",
+        "CCADE · Sitio web corporativo · Sector formación industrial (freelance)",
+        "Luis Topete Success · Sitio web de coaching empresarial (freelance)",
         "Banca Libertad · Integración con Buró de Crédito"
       ]
     }
@@ -92,7 +119,7 @@
       "title": "Desarrollador de Software",
       "company": "Codelab – LegalTracking",
       "period": "2016 – 2019",
-      "description": "Desarrollé y mantuve módulos para una plataforma SaaS B2B de gestión fiscal y administrativa. Implementé soluciones personalizadas para Home Depot, Ernst & Young, Viva Aerobus y Sevin & Asociados. Reduje tiempos de procesamiento documental en ~35% mediante automatización e integración de sistemas."
+      "description": "Desarrollé y mantuve 15+ módulos especializados para una plataforma SaaS B2B de gestión legal (litigios, contratos, cumplimiento, bienes raíces, propiedad intelectual). Lideré la migración completa de la plataforma de Visual Basic a C#. Implementé soluciones personalizadas para Home Depot, Ernst & Young, Viva Aerobus y Sevin & Asociados. Reduje tiempos de procesamiento documental en ~35% mediante automatización e integración de sistemas."
     },
     "job4": {
       "title": "Desarrollador – Integración Buró de Crédito",

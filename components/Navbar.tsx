@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Menu, X, Download } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const NAV_LINKS = ['about', 'skills', 'projects', 'experience', 'contact'] as const;
 
@@ -11,11 +12,28 @@ export default function Navbar({ locale }: { locale: string }) {
   const t = useTranslations('nav');
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveSection(entry.target.id);
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px' }
+    );
+    NAV_LINKS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
   }, []);
 
   const scrollTo = (id: string) => {
@@ -51,9 +69,19 @@ export default function Navbar({ locale }: { locale: string }) {
             <button
               key={link}
               onClick={() => scrollTo(link)}
-              className="px-3 py-2 text-sm text-slate-400 hover:text-white transition-colors rounded-md hover:bg-slate-800"
+              className={`relative px-3 py-2 text-sm transition-colors rounded-md ${
+                activeSection === link
+                  ? 'text-white'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-800'
+              }`}
             >
               {t(link)}
+              {activeSection === link && (
+                <motion.span
+                  layoutId="activeNav"
+                  className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-indigo-400"
+                />
+              )}
             </button>
           ))}
         </div>
