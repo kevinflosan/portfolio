@@ -2,6 +2,13 @@
 import { useTranslations } from 'next-intl';
 import { Code2, Monitor, Smartphone, Database, Bot, Layers } from 'lucide-react';
 import { motion, type Variants } from 'framer-motion';
+import {
+  SiDotnet, SiPhp,
+  SiJavascript, SiHtml5, SiBootstrap, SiJquery, SiNextdotjs, SiTailwindcss, SiFigma,
+  SiFlutter, SiMysql, SiBlazor, SiAnthropic,
+} from 'react-icons/si';
+import { TbBrandAzure } from 'react-icons/tb';
+import type { IconType } from 'react-icons';
 
 const containerVariants: Variants = {
   hidden: {},
@@ -10,6 +17,27 @@ const containerVariants: Variants = {
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+// Map tech name → react-icons icon
+const TECH_ICONS: Record<string, IconType> = {
+  'C# / .NET Core': SiDotnet,
+  'C#': SiDotnet,
+  'ASP.NET Zero': SiDotnet,
+  'PHP': SiPhp,
+  'Microsoft Azure': TbBrandAzure,
+  'Blazor Server': SiBlazor,
+  'Blazor WebAssembly': SiBlazor,
+  'JavaScript': SiJavascript,
+  'HTML5 / CSS3': SiHtml5,
+  'Bootstrap 5': SiBootstrap,
+  'jQuery / Ajax': SiJquery,
+  'Next.js / React': SiNextdotjs,
+  'Tailwind CSS': SiTailwindcss,
+  'Figma': SiFigma,
+  'Flutter': SiFlutter,
+  'MySQL': SiMysql,
+  'Claude (Anthropic)': SiAnthropic,
 };
 
 const SKILL_DATA = [
@@ -94,14 +122,18 @@ export default function Skills() {
 
               {/* Tech pills */}
               <div className="flex flex-wrap gap-2">
-                {tech.map((item) => (
-                  <span
-                    key={item}
-                    className="px-2.5 py-1 text-xs rounded-full bg-slate-800 text-slate-400 border border-slate-700 group-hover:border-slate-600 transition-colors"
-                  >
-                    {item}
-                  </span>
-                ))}
+                {tech.map((item) => {
+                  const TechIcon = TECH_ICONS[item];
+                  return (
+                    <span
+                      key={item}
+                      className="flex items-center gap-1.5 px-2.5 py-1 text-xs rounded-full bg-slate-800 text-slate-400 border border-slate-700 group-hover:border-slate-600 transition-colors"
+                    >
+                      {TechIcon && <TechIcon size={11} className="opacity-70 flex-shrink-0" />}
+                      {item}
+                    </span>
+                  );
+                })}
               </div>
             </motion.div>
           ))}

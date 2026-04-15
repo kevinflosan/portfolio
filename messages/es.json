@@ -137,6 +137,17 @@
     "locationLabel": "Ubicación",
     "locationValue": "Querétaro, México",
     "copyEmail": "Copiar correo",
-    "copied": "¡Copiado!"
+    "copied": "¡Copiado!",
+    "formTitle": "Envíame un mensaje",
+    "formName": "Nombre",
+    "formEmail": "Correo electrónico",
+    "formMessage": "Mensaje",
+    "formNamePlaceholder": "Tu nombre",
+    "formEmailPlaceholder": "tu@correo.com",
+    "formMessagePlaceholder": "Cuéntame sobre tu proyecto u oportunidad...",
+    "formSend": "Enviar mensaje",
+    "formSending": "Enviando...",
+    "formSuccess": "¡Mensaje enviado! Te responderé pronto.",
+    "formError": "Algo salió mal. Intenta de nuevo o escríbeme directamente."
   }
 }

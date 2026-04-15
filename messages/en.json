@@ -137,6 +137,17 @@
     "locationLabel": "Location",
     "locationValue": "Querétaro, Mexico",
     "copyEmail": "Copy email",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "formTitle": "Send a message",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formNamePlaceholder": "Your name",
+    "formEmailPlaceholder": "your@email.com",
+    "formMessagePlaceholder": "Tell me about your project or opportunity...",
+    "formSend": "Send message",
+    "formSending": "Sending...",
+    "formSuccess": "Message sent! I'll get back to you soon.",
+    "formError": "Something went wrong. Please try again or email me directly."
   }
 }

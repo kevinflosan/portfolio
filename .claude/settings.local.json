@@ -12,7 +12,14 @@
       "WebFetch(domain:www.ccade.com.mx)",
       "WebFetch(domain:www.luistopete.com)",
       "Bash(npm run:*)",
-      "WebFetch(domain:legaltracking.com.mx)"
+      "WebFetch(domain:legaltracking.com.mx)",
+      "Bash(npm install:*)",
+      "Bash(node -e \"const si = require\\('react-icons/si'\\); const keys = Object.keys\\(si\\); console.log\\(keys.filter\\(k => k.toLowerCase\\(\\).includes\\('blazor'\\) || k.toLowerCase\\(\\).includes\\('entity'\\) || k.toLowerCase\\(\\).includes\\('anthropic'\\) || k.toLowerCase\\(\\).includes\\('xamarin'\\) || k.toLowerCase\\(\\).includes\\('maui'\\)\\)\\)\")",
+      "Bash(node -e \"const si = require\\('react-icons/si'\\); const keys = Object.keys\\(si\\); console.log\\(keys.filter\\(k => k.toLowerCase\\(\\).includes\\('oracle'\\) || k.toLowerCase\\(\\).includes\\('sql'\\) || k.toLowerCase\\(\\).includes\\('microsoft'\\)\\)\\)\")",
+      "Bash(node -e \"const si = require\\('react-icons/si'\\); const keys = Object.keys\\(si\\); console.log\\(keys.filter\\(k => k.toLowerCase\\(\\).includes\\('azure'\\) || k.toLowerCase\\(\\).includes\\('microsof'\\)\\)\\)\")",
+      "Bash(node -e \"const tb = require\\('react-icons/tb'\\); const keys = Object.keys\\(tb\\); console.log\\(keys.filter\\(k => k.toLowerCase\\(\\).includes\\('azure'\\) || k.toLowerCase\\(\\).includes\\('brand'\\)\\)\\)\")",
+      "Bash(node -e \"const tb = require\\('react-icons/tb'\\); const keys = Object.keys\\(tb\\); console.log\\(keys.filter\\(k => k.toLowerCase\\(\\).includes\\('azure'\\)\\)\\)\")",
+      "Bash(node -e \"const si = require\\('react-icons/si'\\); const keys = Object.keys\\(si\\); console.log\\(keys.filter\\(k => k.toLowerCase\\(\\).includes\\('sharp'\\) || k.toLowerCase\\(\\).includes\\('csharp'\\) || k.toLowerCase\\(\\).includes\\('dotnet'\\) || k.toLowerCase\\(\\).includes\\('blazor'\\) || k.toLowerCase\\(\\).includes\\('jquery'\\) || k.toLowerCase\\(\\).includes\\('bootstrap'\\) || k.toLowerCase\\(\\).includes\\('flutter'\\) || k.toLowerCase\\(\\).includes\\('mysql'\\) || k.toLowerCase\\(\\).includes\\('anthropic'\\)\\)\\)\")"
     ]
   }
 }
