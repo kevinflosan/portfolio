@@ -93,11 +93,34 @@ export default function Hero({ locale }: { locale: string }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        {/* Open to work badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-sm font-medium">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          {t('openToWork')}
-        </div>
+        {/* Open to work card */}
+        <motion.div
+          className="inline-flex flex-col items-center gap-3 px-6 py-4 mb-8 rounded-2xl border border-emerald-500/25 bg-emerald-500/8 backdrop-blur-sm"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          {/* Status row */}
+          <div className="flex items-center gap-2 text-emerald-400 font-semibold text-sm">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400" />
+            </span>
+            {t('openToWork')}
+          </div>
+          {/* Detail chips */}
+          <div className="flex items-center gap-2 flex-wrap justify-center">
+            <span className="px-2.5 py-0.5 text-xs rounded-full bg-slate-800/80 border border-slate-700 text-slate-300">
+              ⚡ {t('availability')}
+            </span>
+            <span className="px-2.5 py-0.5 text-xs rounded-full bg-slate-800/80 border border-slate-700 text-slate-300">
+              🌎 {t('workModality')}
+            </span>
+            <span className="px-2.5 py-0.5 text-xs rounded-full bg-slate-800/80 border border-slate-700 text-slate-300">
+              💼 {t('workType')}
+            </span>
+          </div>
+        </motion.div>
 
         {/* Greeting + name */}
         <p className="text-slate-400 text-lg sm:text-xl mb-2">{t('greeting')}</p>

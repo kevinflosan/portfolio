@@ -10,6 +10,9 @@
   "hero": {
     "greeting": "Hi, I'm",
     "openToWork": "Open to Work",
+    "availability": "Available now",
+    "workModality": "Remote · Hybrid",
+    "workType": "Full-time · Freelance",
     "role1": "Senior Full-Stack Developer",
     "role2": "Product Owner",
     "role3": "Technical Lead",
